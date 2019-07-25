@@ -1,0 +1,261 @@
+<html>
+	<head>
+		<style type="text/css">
+			body {
+			  margin: 0 auto;
+			  padding: 20px;
+			  background-color: #ccc;
+			}
+
+			.container {
+			  background-color: white;
+			  padding: 10px;
+			  width: 1000px;
+			  margin: 0 auto;
+			}
+
+			.form-row {
+			  padding: 10px 0;
+			  display: flex;
+			}
+
+			.form-row label {
+			  flex: 1;
+			/*   margin-right: 16px; */
+			}
+
+			.form-row input {
+			  flex: 5;
+			}
+
+			.main-section {
+			  background-color: white;
+			  margin-top: 20px;
+			  display: flex;
+			}
+
+			.main-section div {
+			  padding: 10px;
+			}
+
+			.section-1 {
+			  flex: 3;
+			  order: 2;
+			}
+
+			.section-2 {
+			  flex: 1;
+			  order: 1;
+			}
+
+			.section-3 {
+			  flex: 1;
+			  order: 3;
+			}
+
+			.cards {
+			  margin-top: 10px;
+			}
+
+			@media (min-width: 900px) {
+			  .cards {
+				display: flex;
+			  /*   align-items: flex-start; */  /*Default value*/
+			  /*   align-items: flex-end; */
+			  /*   align-items: center; */
+			  /*   align-items: stretch; */
+
+			  /*   justify-content: flex-start; */  /*Default value*/
+			  /*   justify-content: flex-end; */
+			  /*   justify-content: center; */
+				justify-content: space-between;
+			  }
+			}
+
+			.cards div {
+			  padding: 10px;
+			  margin-top: 10px;
+			/*   width: 30%; */
+			  box-sizing: border-box;
+			  flex-basis: 30%;
+			}
+
+			.card-1 {
+			  background-color: lightblue;
+			}
+
+			.card-2 {
+			  background-color: lightgreen;
+			}
+
+			.card-3 {
+			  background-color: lightpink;
+			}
+			
+			.preserve-width {
+			  background-color: white;
+			  margin-top: 20px;
+			  padding: 40px;
+			  display: flex;
+			  justify-content: space-around;
+			  flex-wrap: wrap;
+			}
+
+			.preserve-width div {
+			  background-color: red;
+			  color: white;
+			  font-size: 60px;
+			  font-weight: bold;
+			  text-align: center;
+			  line-height: 100px;
+			  width: 150px;
+			  height: 100px;
+			  margin-bottom: 10px;
+			}
+			
+			.perfect-centered {
+			  margin-top: 20px;
+			  height: 400px;
+			  background-color: white;
+			  display: flex;
+			}
+
+			.perfect-centered span {
+			  font-size: 40px;
+			  font-weight: bold;
+			  margin: auto;
+			}
+			
+			.column-rows {
+			  margin-top: 20px;
+			  display: flex;
+			}
+
+			.column:nth-child(1) {
+			  background-color: white;
+			  padding: 10px;
+			  flex: 1;
+			}
+
+			.column:nth-child(2) {
+			  flex: 1;
+			  display: flex;
+			/*   flex-direction: row; */ /*Default value*/
+			  flex-direction: column;
+			}
+
+			.row:nth-child(1) {
+			  background-color: lightblue;
+			}
+
+			.row {
+			  flex: 1;
+			}
+
+			.row:nth-child(2) {
+			  background-color: lightgreen;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+		  <form>
+			<div class="form-row">
+			  <label>Username or Email Id</label>
+			  <input type="text"/>
+			</div>
+			<div class="form-row">
+			  <label>Passowrd</label>
+			  <input type="password"/>
+			</div>
+		  </form>
+		</div>
+
+		<div class="main-section">
+		  <div class="section-1">
+			<h2>Course Structure</h2>
+			<p>
+			  Welcome to the react starter course! The purpose of this course is to get you comfortable working in an advanced front-end environment quickly. By the end of this course, you should:
+			</p>
+			<ul>
+			  <li>be familiar with react</li>
+			  <li>understand how to think about building UIs with components</li>
+			  <li>understand when and why to use state</li>
+			  <li>have experience building a number of components and small apps</li>
+			</ul>
+			<p>
+			  Because there's no better way to learn than doing, this course is project-focused. You will be introduced to react concepts and new javascript features as they are needed to accomplish projects. Each project description should list out the topics that are needed to successfully complete the project. Any react topics covered leading up to a project are specifcally needed for that project. Once we've covered an ES6 topic, you should try to use your new knowledge in all of the projects that follow.
+			</p>
+		  </div>
+		  <div class="section-2">
+			<h2>Prerequisites</h2>
+			<p>
+			  This course assumes that you have a solid command of HTML and CSS, and at least a decent command of javascript. If any of those things are not true, your first stop should be one of the following:
+			</p>
+		  </div>
+		  <div class="section-3">
+			<h2>Hello World</h2>
+			<p>
+			  The react library is required to create react components. The react-dom library has functions for rendering react components to the DOM. The function used for client-side rendering is called render and it accepts two arguments: a react component, a DOM target.
+			</p>
+			<ul>
+			  <li>Learn HTML & CSS</li>
+			  <li>Learn JavaScript</li>
+			</ul>
+		  </div>
+		</div>
+
+		<div class="cards">
+		  <div class="card-1">
+			<h3>Title 1</h3>
+			<p>
+			  You can use regular css with react by including extrenal stylesheets or adding style tags to the html file where your app is rendered.
+			</p>
+			<p>
+			  You can use regular css with react by including extrenal stylesheets or adding style tags to the html file where your app is rendered.
+			</p>
+			<p>
+			  You can use regular css with react by including extrenal stylesheets or adding style tags to the html file where your app is rendered.
+			</p>
+		  </div>
+		  <div class="card-2">
+			<h3>Title 2</h3>
+			<p>
+			  You can use regular css with react by including extrenal stylesheets or adding style tags to the html file where your app is rendered.
+			</p>
+			<p>
+			  You can use regular css with react by including extrenal stylesheets or adding style tags to the html file where your app is rendered.
+			</p>
+		  </div>
+		  <div class="card-3">
+			<h3>Title 3</h3>
+			<p>
+			  You can use regular css with react by including extrenal stylesheets or adding style tags to the html file where your app is rendered.
+			</p>
+		  </div>
+		</div>
+		
+		<div class="preserve-width">
+		  <div class="1">1</div>
+		  <div class="1">2</div>
+		  <div class="1">3</div>
+		  <div class="1">4</div>
+		  <div class="1">5</div>
+		</div>
+		
+		<div class="perfect-centered">
+		  <span>This is perfectly centered text.</span>
+		</div>
+		
+		<div class="column-rows">
+		  <div class="column">
+			<h1>CSS-in-JS</h1>
+			<p>This is a more complex approach that we'll address later in this course. Though most of our projects use css-in-js, for now you'll use traditional classes or inline styles to keep things fast and familiar.</p>
+		  </div>
+		  <div class="column">
+			<div class="row">A</div>
+			<div class="row">B</div>
+		  </div>
+		</div>
+	</body>
+</html>
